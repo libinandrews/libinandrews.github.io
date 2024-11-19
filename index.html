@@ -16,59 +16,61 @@
         }
 
         header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background: linear-gradient(to right, #0066cc, #003366);
             color: #fff;
+            padding: 20px 40px;
             text-align: center;
-            padding: 40px 20px;
         }
 
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
+        .profile-photo-header {
+            flex-shrink: 0;
+            margin-right: 20px;
         }
 
-        header h3 {
-            font-size: 1.4rem;
-            font-weight: 400;
-            margin: 0;
-        }
-
-        .profile-photo {
-            display: flex;
-            justify-content: center;
-            margin-top: -60px;
-        }
-
-        .profile-photo img {
-            border: 5px solid #fff;
+        .profile-photo-header img {
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            border: 5px solid #fff;
+            width: 100px;
+            height: 100px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        main {
+        .header-text {
+            text-align: left;
+        }
+
+        .header-text h1 {
+            font-size: 2.2rem;
+            margin: 0;
+        }
+
+        .header-text h3 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin: 5px 0 0;
+        }
+
+        .content-wrapper {
             max-width: 900px;
             margin: 30px auto;
             background: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            padding: 20px;
         }
 
         section {
-            padding: 30px;
-            border-bottom: 1px solid #eee;
-        }
-
-        section:last-child {
-            border-bottom: none;
+            margin-bottom: 20px;
         }
 
         section h2 {
             font-size: 1.8rem;
             color: #0066cc;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         section p,
@@ -118,16 +120,18 @@
 
 <body>
     <header>
-        <h1>Libin Andrews</h1>
-        <h3>Automotive Engineer & Python Maestro</h3>
+        <div class="profile-photo-header">
+            <img src="https://avatars.githubusercontent.com/u/40682955?v=4" alt="Profile Photo">
+        </div>
+        <div class="header-text">
+            <h1>Libin Andrews</h1>
+            <h3>Automotive Engineer & Python Maestro</h3>
+        </div>
     </header>
-    <div class="profile-photo">
-        <img src="https://avatars.githubusercontent.com/u/40682955?v=4" alt="Profile Photo">
-    </div>
-    <main>
+    <div class="content-wrapper">
         <section>
             <p>Combining the best of Automotive Engineering and Python Programming to deliver innovative solutions with
-                over 6 years of professional experience.</p>
+                over 5 years of professional experience.</p>
         </section>
         <section>
             <h2>🚗 Automotive Expertise</h2>
@@ -160,7 +164,7 @@
             <h2>🌐 Connect with Me</h2>
             <a href="https://in.linkedin.com/in/libinandrews" target="_blank">View LinkedIn Profile</a>
         </section>
-    </main>
+    </div>
 </body>
 
 </html>
